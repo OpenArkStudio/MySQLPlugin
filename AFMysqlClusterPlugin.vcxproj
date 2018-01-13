@@ -10,6 +10,25 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AFCAsyMysqlModule.cpp" />
+    <ClCompile Include="AFCMysqlDriver.cpp" />
+    <ClCompile Include="AFCMysqlDriverManager.cpp" />
+    <ClCompile Include="AFCMysqlModule.cpp" />
+    <ClCompile Include="AFMysqlClusterPlugin.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AFCAsyMysqlModule.h" />
+    <ClInclude Include="AFCMysqlDriver.h" />
+    <ClInclude Include="AFCMysqlDriverManager.h" />
+    <ClInclude Include="AFCMysqlModule.h" />
+    <ClInclude Include="AFIMysqlConnectMgrModule.h" />
+    <ClInclude Include="AFIMysqlDriver.h" />
+    <ClInclude Include="AFIMysqlDriverManager.h" />
+    <ClInclude Include="AFIMysqlModule.h" />
+    <ClInclude Include="AFMysqlClusterPlugin.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{03A9453A-D961-409D-A10D-ACB8B7A9F2AB}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -125,31 +144,6 @@ copy /y $(SolutionDir)\_Out\Comm\$(Configuration)\$(ProjectName).dll $(SolutionD
 copy /y $(SolutionDir)\_Out\Comm\$(Configuration)\$(ProjectName).pdb $(SolutionDir)\_Out\Server\$(Configuration)\Tutorial6\$(ProjectName).pdb</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="dllmain.cpp">
-      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-      </PrecompiledHeader>
-      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-      </PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="NFCAsyMysqlModule.cpp" />
-    <ClCompile Include="NFCMysqlDriver.cpp" />
-    <ClCompile Include="NFCMysqlDriverManager.cpp" />
-    <ClCompile Include="NFCMysqlModule.cpp" />
-    <ClCompile Include="NFMysqlClusterPlugin.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="NFCAsyMysqlModule.h" />
-    <ClInclude Include="NFCMysqlDriver.h" />
-    <ClInclude Include="NFCMysqlDriverManager.h" />
-    <ClInclude Include="NFCMysqlModule.h" />
-    <ClInclude Include="NFMysqlClusterPlugin.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -1,5 +1,5 @@
 // dllmain.cpp : Defines the entry point for the DLL application.
-#include "NFComm/NFPluginModule/NFPlatform.h"
+#include "SDK/Base/AFPlatform.hpp"
 
 #pragma comment( lib, "Dbghelp.lib" )
 
