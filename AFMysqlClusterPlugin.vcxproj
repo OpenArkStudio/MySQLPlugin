@@ -14,6 +14,7 @@
     <ProjectGuid>{03A9453A-D961-409D-A10D-ACB8B7A9F2AB}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>NFMysqlClusterPlugin</RootNamespace>
+    <ProjectName>AFMysqlClusterPlugin</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
