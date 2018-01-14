@@ -1,4 +1,6 @@
-# NFMysqlPlugin
-MySQL plugin for ArkGameFrame
+# MySQLPlugin
+MySQL plugin for ARK GAME
 
-Need mysql & mysqlpp
+Prerequisites:
+- mysql client
+- mysql++
