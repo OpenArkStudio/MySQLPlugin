@@ -53,7 +53,7 @@ bool AFCMySQLModule::Execute()
 {
     if (mnLastCheckTime + 10 > GetPluginManager()->GetNowTime())
     {
-        return false;
+        return true;
     }
 
     mnLastCheckTime = GetPluginManager()->GetNowTime();
