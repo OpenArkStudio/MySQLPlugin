@@ -80,7 +80,7 @@ public:
 
 
     virtual bool Connect(const std::string& strDBName, const std::string& strDBHost, const int nDBPort, const std::string& strDBUser, const std::string& strDBPwd);
-    virtual  bool Execute();
+    virtual void Update();
 
     virtual bool Query(const std::string& qstr, mysqlpp::StoreQueryResult& queryResult);
     virtual bool Query(const std::string& qstr);
@@ -92,7 +92,7 @@ public:
     virtual bool CanReconnect();
     virtual bool Reconnect();
 
-    virtual bool Updata(const std::string& strRecordName, const std::string& strKey, const std::vector<std::string>& fieldVec, const std::vector<std::string>& valueVec);
+    virtual bool Update(const std::string& strRecordName, const std::string& strKey, const std::vector<std::string>& fieldVec, const std::vector<std::string>& valueVec);
     virtual bool Query(const std::string& strRecordName, const std::string& strKey, const std::vector<std::string>& fieldVec, std::vector<std::string>& valueVec);
     virtual bool Select(const std::string& strRecordName, const std::string& strKey, const std::vector<std::string>& fieldVec, std::vector<std::string>& valueVec);
     virtual bool Delete(const std::string& strRecordName, const std::string& strKey);

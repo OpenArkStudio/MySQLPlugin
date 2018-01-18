@@ -49,11 +49,11 @@ bool AFCMySQLModule::AfterInit()
     return true;
 }
 
-bool AFCMySQLModule::Execute()
+void AFCMySQLModule::Update()
 {
     if (mnLastCheckTime + 10 > GetPluginManager()->GetNowTime())
     {
-        return true;
+        return;
     }
 
     mnLastCheckTime = GetPluginManager()->GetNowTime();
@@ -62,8 +62,6 @@ bool AFCMySQLModule::Execute()
     {
         m_pMysqlDriverManager->CheckMySQL();
     }
-
-    return true;
 }
 
 bool AFCMySQLModule::AddMysqlServer(const int nServerID, const std::string& strDns, const std::string& strIP, const int nPort, const std::string strDBName, const std::string strDBUser, const std::string strDBPwd, const int nRconnectTime/* = 10*/, const int nRconneCount/* = -1*/)
@@ -76,12 +74,12 @@ bool AFCMySQLModule::AddMysqlServer(const int nServerID, const std::string& strD
     return m_pMysqlDriverManager->AddMySQLServer(nServerID, strDns, strIP, nPort, strDBName, strDBUser, strDBPwd, nRconnectTime, nRconneCount);
 }
 
-bool AFCMySQLModule::Updata(const std::string& strRecordName, const std::string& strKey, const std::vector<std::string>& fieldVec, const std::vector<std::string>& valueVec)
+bool AFCMySQLModule::Update(const std::string& strRecordName, const std::string& strKey, const std::vector<std::string>& fieldVec, const std::vector<std::string>& valueVec)
 {
     AFIMySQLDriver* pDriver = m_pMysqlDriverManager->GetMySQLDriver();
     if (pDriver)
     {
-        return pDriver->Updata(strRecordName, strKey, fieldVec, valueVec);
+        return pDriver->Update(strRecordName, strKey, fieldVec, valueVec);
     }
 
     return false;

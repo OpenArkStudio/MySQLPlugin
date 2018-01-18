@@ -62,7 +62,7 @@ public:
 	virtual ~AFIMySQLDriver() {}
 	
     virtual bool Connect(const std::string& strDBName, const std::string& strDBHost, const int nDBPort, const std::string& strDBUser, const std::string& strDBPwd) = 0;
-    virtual  bool Execute() = 0;
+    virtual void Update() = 0;
     virtual mysqlpp::Connection* GetConnection() = 0;
     virtual bool Query(const std::string& qstr, mysqlpp::StoreQueryResult& queryResult) = 0;
     virtual bool Query(const std::string& qstr) = 0;
@@ -71,7 +71,7 @@ public:
     virtual bool Reconnect() = 0;
     virtual bool CanReconnect() = 0;
 
-    virtual bool Updata(const std::string& strRecordName, const std::string& strKey, const std::vector<std::string>& fieldVec, const std::vector<std::string>& valueVec) = 0;
+    virtual bool Update(const std::string& strRecordName, const std::string& strKey, const std::vector<std::string>& fieldVec, const std::vector<std::string>& valueVec) = 0;
     virtual bool Query(const std::string& strRecordName, const std::string& strKey, const std::vector<std::string>& fieldVec, std::vector<std::string>& valueVec) = 0;
     virtual bool Select(const std::string& strRecordName, const std::string& strKey, const std::vector<std::string>& fieldVec, std::vector<std::string>& valueVec) = 0;
     virtual bool Delete(const std::string& strRecordName, const std::string& strKey) = 0;

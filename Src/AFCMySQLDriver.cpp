@@ -60,14 +60,12 @@ bool AFCMySQLDriver::Connect(const std::string& strDBName, const std::string& st
     return Connect();
 }
 
-bool AFCMySQLDriver::Execute()
+void AFCMySQLDriver::Update()
 {
     if (IsNeedReconnect() && CanReconnect())
     {
         Connect(mstrDBName, mstrDBHost, mnDBPort, mstrDBUser, mstrDBPwd);
     }
-
-    return true;
 }
 
 bool AFCMySQLDriver::Query(const std::string& qstr, mysqlpp::StoreQueryResult& queryResult)
@@ -210,7 +208,7 @@ bool AFCMySQLDriver::Connect()
     return true;
 }
 
-bool AFCMySQLDriver::Updata(const std::string& strRecordName, const std::string& strKey, const std::vector<std::string>& fieldVec, const std::vector<std::string>& valueVec)
+bool AFCMySQLDriver::Update(const std::string& strRecordName, const std::string& strKey, const std::vector<std::string>& fieldVec, const std::vector<std::string>& valueVec)
 {
     mysqlpp::Connection* pConnection = GetConnection();
     if (NULL == pConnection)

@@ -34,11 +34,11 @@ public:
 
     virtual bool Init();
     virtual bool Shut();
-    virtual bool Execute();
+    virtual void Update();
     virtual bool AfterInit();
 
     //////////////////////////////////////////////////////////////////////////
-    virtual bool Updata(const std::string& strRecordName, const std::string& strKey, const std::vector<std::string>& fieldVec, const std::vector<std::string>& valueVec);
+    virtual bool Update(const std::string& strRecordName, const std::string& strKey, const std::vector<std::string>& fieldVec, const std::vector<std::string>& valueVec);
     virtual bool Query(const std::string& strRecordName, const std::string& strKey, const std::vector<std::string>& fieldVec, std::vector<std::string>& valueVec);
     virtual bool Select(const std::string& strRecordName, const std::string& strKey, const std::vector<std::string>& fieldVec, std::vector<std::string>& valueVec);
 
