@@ -21,7 +21,7 @@
 #pragma once
 
 #include "AFCMysqlDriver.h"
-#include "SDK/Base/AFPlatform.hpp"
+#include "SDK/Core/Base/AFPlatform.hpp"
 #include "SDK/Interface/AFIPluginManager.h"
 #include "Interface/AFIMySQLModule.h"
 #include "Interface/AFIMysqlDriverManager.h"
@@ -33,9 +33,9 @@ public:
     virtual ~AFCMySQLModule();
 
     virtual bool Init();
+	virtual bool PostInit();
+	virtual void Update();
     virtual bool Shut();
-    virtual void Update();
-    virtual bool AfterInit();
 
     //////////////////////////////////////////////////////////////////////////
     virtual bool Update(const std::string& strRecordName, const std::string& strKey, const std::vector<std::string>& fieldVec, const std::vector<std::string>& valueVec);

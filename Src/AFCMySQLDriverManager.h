@@ -20,7 +20,7 @@
 
 #pragma once
 
-#include "SDK/Base/AFMap.h"
+#include "SDK/Core/Base/AFMap.h"
 #include "Interface/AFIMySQLDriver.h"
 #include "Interface/AFIMySQLDriverManager.h"
 

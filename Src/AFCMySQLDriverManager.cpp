@@ -10,7 +10,7 @@
 #endif
 
 #include "AFCMysqlDriver.h"
-#include "SDK/Base/AFIDataList.h"
+#include "SDK/Core/Base/AFIDataList.h"
 #include "AFCMysqlDriverManager.h"
 
 AFIMySQLDriver* AFCMySQLDriverManager::GetMySQLDriver()

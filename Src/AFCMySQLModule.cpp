@@ -44,7 +44,7 @@ bool AFCMySQLModule::Shut()
     return true;
 }
 
-bool AFCMySQLModule::AfterInit()
+bool AFCMySQLModule::PostInit()
 {
     return true;
 }
